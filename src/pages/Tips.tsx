@@ -83,6 +83,41 @@ const tips = [
     body: 'Föräldraburnout drabbar uppskattningsvis 5–8% av föräldrar i Sverige. Tecken: extremt trötthet, distans till barnet, känsla av att vara otillräcklig. Sök hjälp tidigt – det är mod, inte svaghet.',
     source: 'Moïra Mikolajczak, UCLouvain',
   },
+  {
+    emoji: '🧩',
+    category: 'Stimulans',
+    title: 'Tristess är bra för barnet',
+    body: 'Det är okej att barnet blir uttråkat. Tristess tvingar hjärnan att hitta på egna lösningar – det är grunden för kreativitet. Föräldrar behöver inte underhålla barnet hela dagen. Fri lek utan instruktioner är mer värdefullt än strukturerade aktiviteter.',
+    source: 'Peter Gray, Boston College',
+  },
+  {
+    emoji: '🔁',
+    category: 'Sömn',
+    title: 'Sömnregression = neural mognad',
+    body: '4-, 8-, 12- och 18-månaders sömnregressioner är tecken på hjärnans snabba tillväxt. Barnet vaknar mer för att det lär sig något nytt – krypa, stå, prata. Dessa perioder varar vanligtvis 2–6 veckor. Du gör ingenting fel.',
+    source: 'The Wonder Weeks (Hetzel-van den Bosch & Plooij)',
+  },
+  {
+    emoji: '💬',
+    category: 'Stimulans',
+    title: '"Serve and return" – pingis för hjärnan',
+    body: 'Varje gång barnet gör ett ljud, pekar eller ler och du svarar – stärks en neural koppling. Harvard kallar detta "serve and return". Du behöver inga dyra leksaker – din uppmärksamhet och responsivitet är det bästa verktyget.',
+    source: 'Harvard Center on the Developing Child',
+  },
+  {
+    emoji: '🌡️',
+    category: 'Hälsa',
+    title: 'Tandbrytning orsakar INTE hög feber',
+    body: 'En utbredd myt. Forskning visar att tandbrytning kan orsaka lätt temperaturökning (under 38°C) men INTE feber. Om barnet har feber under tandbrytning – sök orsaken på annat håll. Feber är alltid ett tecken på infektion.',
+    source: 'Pediatrics (2016)',
+  },
+  {
+    emoji: '🤸',
+    category: 'Motorik',
+    title: 'Hoppa över krypning är okej',
+    body: 'Många oroar sig om barnet inte kryper "rätt". Forskning visar att krypning inte är ett obligatoriskt steg – en del barn skojar, rullar eller reser sig direkt. Det som spelar roll är att barnet rör sig och utforskar, inte metoden.',
+    source: 'American Academy of Pediatrics',
+  },
 ]
 
 import { useState } from 'react'
@@ -149,15 +184,60 @@ export default function Tips() {
           ))}
         </div>
 
-        {/* Do/Don't sektion */}
+        {/* Myter */}
         <section className="mt-5">
-          <h2 className="section-title">Vanliga missförstånd</h2>
+          <h2 className="section-title">Myter vs. fakta</h2>
+          <p className="section-subtitle">Saker som "alla vet" men som forskning motbevisar</p>
           <div className="row g-4 mt-2">
             {[
-              { myth: 'Du ska inte bortskämma barnet genom att ta upp det', fact: 'Omöjligt under det första levnadsåret. Att svara på gråt bygger trygg anknytning. Barn som bärs mycket GRÅTER MINDRE.' },
-              { myth: 'Bebisen ska sova igenom natten vid 3 månader', fact: 'Biologiskt sett är det normalt att vakna på natten upp till 18 månaders ålder. Förväntningarna är orealistiska och skapar onödig stress.' },
-              { myth: 'Läs graviditetsböcker – de är sanna', fact: 'Många populärbeter är inte evidensbaserade. Prioritera böcker skrivna av läkare eller barnpsykologer med referenser.' },
-              { myth: 'Konvalescent mat (välling tidigt) gör barnet mätare', fact: 'Forskning visar att tidig introduktion av välling INTE gör barn mer mätta eller ger bättre sömn. Det kan tvärtom orsaka mag-problem.' },
+              {
+                myth: 'Du bortskämmer barnet om du tar upp det varje gång det gråter',
+                fact: 'Omöjligt under det första levnadsåret. Att konsekvent svara på gråt bygger trygg anknytning. Barn som bärs och hålls mycket gråter faktiskt MINDRE, inte mer.',
+              },
+              {
+                myth: 'Bebisen ska sova igenom natten vid 3 månader',
+                fact: 'Biologiskt normalt att vakna om natten upp till 18 månaders ålder. Nattuppvaknanden är ett evolutionärt skyddssystem. Förväntningarna är orealistiska och skapar onödig skuldkänsla.',
+              },
+              {
+                myth: 'Välling/gröt tidigt ger barnet bättre sömn',
+                fact: 'Stora studier visar att tidig introduktion av välling INTE förbättrar sömnen. WHO och Socialstyrelsen avråder från välling under 6 månader – det kan dessutom orsaka mag-problem.',
+              },
+              {
+                myth: 'Barn lär sig bäst av strukturerade aktiviteter och "lärande lekar"',
+                fact: 'Forskning är tydlig: fri, ostrukturerad lek är det effektivaste sättet att lära sig. Barn som lek mer fritt har bättre exekutiva funktioner, kreativitet och social förmåga.',
+              },
+              {
+                myth: 'Du måste prata med barnet på ditt modersmål – annars förvirras det',
+                fact: 'Flerspråkighet förvirrar INTE barn. De skiljer på språk från ca 6 månaders ålder. Flerspråkiga barn kan ha en något smalare vokabulär per språk initialt men totalt sett lika stor eller större.',
+              },
+              {
+                myth: 'Tidig läs- och skrivträning ger smartare barn',
+                fact: 'Forskning visar att tidig formell undervisning (innan 6–7 år) inte ger långvariga fördelar. Lek, utforskning och relationer är mer värdefull "skolförberedelse" än ABC-träning.',
+              },
+              {
+                myth: 'Tandbrytning orsakar feber',
+                fact: 'En utbredd myt som studier motbevisar. Tandbrytning kan ge lätt temperaturökning (under 38°C) men INTE feber. Feber vid tandbrytning = sök annan orsak.',
+              },
+              {
+                myth: 'Pojkar utvecklas långsammare än flickor',
+                fact: 'Det finns statistiska skillnader i grupp men oerhört stor variation inom varje kön. Att förvänta sig att "pojkar alltid är senare" kan göra att man missar verkliga förseningar som bör utredas.',
+              },
+              {
+                myth: 'Klassisk musik gör barn intelligentare (Mozart-effekten)',
+                fact: 'Mozart-effekten (1993) var en liten studie på vuxna, feltolkad som att klassisk musik gör BARN smartare. Uppföljningsstudier har inte kunnat replikera resultaten. Musik är bra – men inte för IQ-höjning.',
+              },
+              {
+                myth: 'Du ska inte prata med bebisen – de förstår ändå inte',
+                fact: 'Nyfödda känner igen mammans röst vid födseln (hörde den i livmodern). Barn registrerar och lagrar språkljud från dag ett. Varje ord du säger bygger neural kapacitet – oavsett om de "förstår" eller inte.',
+              },
+              {
+                myth: 'Att bära barnet hindrar det från att bli självständigt',
+                fact: 'Tvärtom: forskning visar att barn som bärs mycket och har trygg anknytning VÅGAR utforska mer självständigt. Trygghet är grunden för självständighet, inte ett hinder.',
+              },
+              {
+                myth: 'Magliggande (tummytime) är farligt',
+                fact: 'Magliggande under VAKEN tid och under UPPSIKT är inte bara säkert – det är nödvändigt för motorisk utveckling. "Back to sleep, tummy to play" är standardrådet från AAP.',
+              },
             ].map(m => (
               <div className="col-md-6" key={m.myth}>
                 <div className="card-soft h-100">

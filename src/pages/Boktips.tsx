@@ -1,4 +1,75 @@
 const books = [
+  // STEM & nyfikenhet
+  {
+    emoji: '🤖',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '6–10 år',
+    title: 'Machine Learning for Kids',
+    author: 'Dale Lane',
+    desc: 'Lär ut AI och maskininlärning via Scratch. Barnet tränar egna modeller att känna igen bilder, text och ljud. Fantastisk för barn som gillar teknik. Boken kompletterar gratis-verktyget machinelearningforkids.co.uk.',
+    stars: 5,
+    swedish: false,
+  },
+  {
+    emoji: '💻',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '5–8 år',
+    title: 'Hello Ruby: Adventures in Coding',
+    author: 'Linda Liukas',
+    desc: 'Skriven av en finsk programmerare. Ruby löser problem med hjälp av logik och kreativitet. Introducerar programmeringsbegrepp (loopar, algoritmer) via saga. Finns på svenska: "Hej Ruby".',
+    stars: 5,
+    swedish: true,
+  },
+  {
+    emoji: '🔬',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '4–8 år',
+    title: 'Ada Twist, Scientist',
+    author: 'Andrea Beaty',
+    desc: 'Ada ställer frågor om allt – varför luktar saker, hur fungerar saker. Perfekt för att visa att vetenskapligt tänkande = nyfikenhet. Finns i en hel serie om barnforskare.',
+    stars: 5,
+    swedish: false,
+  },
+  {
+    emoji: '🧮',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '3–6 år',
+    title: 'Mathstart-serien',
+    author: 'Stuart J. Murphy',
+    desc: 'Bilderböcker som introducerar matematiska begrepp (sortering, mönster, addition) via berättelser. Gör matematik naturligt och roligt långt innan skolan.',
+    stars: 4,
+    swedish: false,
+  },
+  {
+    emoji: '🌱',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '2–5 år',
+    title: 'National Geographic Little Kids',
+    author: 'National Geographic',
+    desc: 'Faktaböcker om djur, natur och rymden – för de minsta. Fantastiska fotografier. Bygger nyfikenhet och ordförråd på ett naturligt sätt. Bästa fakta-serien för små barn.',
+    stars: 5,
+    swedish: false,
+  },
+  {
+    emoji: '🚀',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '7–12 år',
+    title: 'George and the Secret Key to the Universe',
+    author: 'Lucy & Stephen Hawking',
+    desc: 'Skriven av Stephen Hawking och hans dotter. Äventyr i rymden som lär ut riktig astrofysik. Barn som läser den vill bli astronomer. Finns i en serie på 5 böcker.',
+    stars: 5,
+    swedish: false,
+  },
+  {
+    emoji: '🧪',
+    category: 'STEM & nyfikenhet',
+    ageGroup: '0–3 år',
+    title: 'Baby Loves Science-serien',
+    author: 'Ruth Spiro',
+    desc: 'Pappböcker om kvantfysik, termodynamik och fotosyntesen – på babysvenska! Vad barnet tar in vet vi inte, men du läser begreppen högt och normaliserar vetenskapligt språk från dag ett.',
+    stars: 4,
+    swedish: false,
+  },
   // För föräldrar
   {
     emoji: '📖',
@@ -147,8 +218,8 @@ const books = [
 
 import { useState } from 'react'
 
-const categories = ['Alla', 'För föräldrar', 'Barnböcker']
-const ageGroups = ['Alla åldrar', '0–6 månader', '6–12 månader', '1–3 år']
+const categories = ['Alla', 'STEM & nyfikenhet', 'För föräldrar', 'Barnböcker']
+const ageGroups = ['Alla åldrar', '0–3 år', '3–6 år', '6–12 månader', '0–6 månader', '1–3 år', '4–8 år', '5–8 år', '6–10 år', '7–12 år']
 
 export default function Boktips() {
   const [activeCategory, setActiveCategory] = useState('Alla')
