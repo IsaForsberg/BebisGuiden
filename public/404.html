@@ -2,9 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <title>BebisGuiden</title>
     <script>
-      sessionStorage.redirect = location.href;
+      // SPA redirect trick for GitHub Pages
+      // Encodes the current URL into a query string and redirects to index
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.host + l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
     </script>
-    <meta http-equiv="refresh" content="0;URL='/BebisGuiden/'">
   </head>
+  <body></body>
 </html>
