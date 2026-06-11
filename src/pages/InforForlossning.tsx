@@ -22,7 +22,7 @@ export default function InforForlossning() {
                   <li>Kraftiga värkar med 5 min intervall i 1 timme</li>
                   <li>Blödning (mer än slempropp)</li>
                   <li>Fosterrörelser minskar markant</li>
-                  <li>Svår huvdvärk, synstörningar, svullnad i händer/ansikte</li>
+                  <li>Svår huvudvärk, synstörningar, svullnad i händer/ansikte</li>
                 </ul>
               </div>
             </div>
@@ -113,7 +113,7 @@ export default function InforForlossning() {
                 <h5 style={{ color: '#5a7a52' }}>🤰 Till dig</h5>
                 <ul className="checklist">
                   <li>2–3 lösa bekväma kläder</li>
-                  <li>Ammnings-BH eller sportBH</li>
+                  <li>Amnings-BH eller sportBH</li>
                   <li>Trosor (hög midja, gärna engångs)</li>
                   <li>Nattlinne/pyjamas</li>
                   <li>Sandaler/tofflor</li>
