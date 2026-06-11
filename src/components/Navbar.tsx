@@ -34,6 +34,7 @@ const navItems = [
   { label: 'Inspiration', path: '/inspiration' },
   { label: 'Tips & Tricks', path: '/tips' },
   { label: 'Boktips', path: '/boktips' },
+  { label: 'Artiklar', path: '/artiklar' },
 ]
 
 function DropdownMenu({ label, children, onClose }: {

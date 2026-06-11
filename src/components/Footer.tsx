@@ -32,6 +32,7 @@ export default function Footer() {
             <Link to="/forskning/hjarna">Forskning</Link>
             <Link to="/tips">Tips & Tricks</Link>
             <Link to="/boktips">Boktips</Link>
+            <Link to="/artiklar">Artiklar & forskning</Link>
           </div>
         </div>
         <hr style={{ borderColor: 'rgba(232,196,184,0.3)', margin: '16px 0' }} />

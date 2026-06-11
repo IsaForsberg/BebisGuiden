@@ -14,6 +14,7 @@ import ForskningHjarna from './pages/forskning/ForskningHjarna'
 import ForskningSomn from './pages/forskning/ForskningSomn'
 import ForskningKost from './pages/forskning/ForskningKost'
 import ForskningSkarmtid from './pages/forskning/ForskningSkarmtid'
+import Artiklar from './pages/Artiklar'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/inspiration" element={<Inspiration />} />
           <Route path="/tips" element={<Tips />} />
           <Route path="/boktips" element={<Boktips />} />
+          <Route path="/artiklar" element={<Artiklar />} />
           <Route path="/utveckling/:age" element={<UtvecklingPage />} />
           <Route path="/forskning/hjarna" element={<ForskningHjarna />} />
           <Route path="/forskning/somn" element={<ForskningSomn />} />
